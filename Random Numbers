@@ -1,0 +1,19 @@
+// program
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter the SN: ");
+        int SN=scanner.nextInt();
+        System.out.print("Enter the EN: ");
+        int EN=scanner.nextInt();
+        double random=SN+(Math.random()*((SN+EN)+1));
+        System.out.println(random);
+    }
+}
+
+//output
+Enter the SN: 6
+Enter the EN: 8
+19.945831046757927
+
