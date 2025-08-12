@@ -1,0 +1,298 @@
+//Program
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner x = new Scanner(System.in);
+	    System.out.println("Enter any String:");
+	    String n=x.nextLine();
+	    char mystr= n.charAt(0);
+		System.out.println(mystr);
+	    int my= n.codePointAt(3);
+		System.out.println(my);
+		int m =n.codePointBefore(3);
+		System.out.println(m);
+	}
+}
+//Output
+Enter any String:
+Asina
+A
+110
+105
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        System.out.println("Enter any String2:");
+        String str2 = x.nextLine();
+        int mystr = str1.codePointCount(0, str1.length());
+        System.out.println(mystr);
+        int my = str1.compareTo(str2);
+        System.out.println(my);
+    }
+}
+//Output
+Enter any String1:
+asina
+Enter any String2:
+varsha
+5
+-21
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        System.out.println("Enter any String2:");
+        String str2 = x.nextLine();
+
+        int my = str1.compareToIgnoreCase(str2);
+        System.out.println(my);
+        
+        String mystr = str1.concat(str2);
+        System.out.println(mystr);
+    }
+}
+//Output
+Enter any String1:
+ASI
+Enter any String2:
+asi
+0
+ASIasi
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+      
+        boolean my = str1.contains("Hello");
+        System.out.println(my);
+        
+        boolean mystr = str1.contentEquals("Hello");
+        System.out.println(mystr);
+    }
+}
+//Output
+Enter any String1:
+Hello
+true
+true
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        char[] data = {'A','S','I','N','A'};
+        
+        String str = String.copyValueOf(data, 0, 5);
+        System.out.println(str);
+       
+        System.out.println(str.endsWith("A"));
+    }
+}
+//Output
+ASINA
+true
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of characters: ");
+        int n = sc.nextInt();
+        char[] data = new char[n];
+
+        System.out.println("Enter characters:");
+        for (int i = 0; i < n; i++) {
+            data[i] = sc.next().charAt(0);
+        }
+
+        String str = String.copyValueOf(data, 0, n);
+        System.out.println("The string is: " + str);
+        System.out.println(str.endsWith("A"));
+    }
+}
+/Output
+Enter number of characters: 5
+Enter characters:
+A S I N A
+The string is: ASINA
+true
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String data = "hello";
+        String hi = "hi %s my age n%d";
+
+        System.out.println(data.equalsIgnoreCase("hello"));
+        System.out.printf(hi, "hello", 20);
+    }
+}
+//Output
+true
+hi hello my age n20
+
+
+//Program
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String data = sc.nextLine();
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        String hi = "hi %s my age %d";
+        System.out.println(data.equalsIgnoreCase("Asina"));
+        System.out.printf(hi, data, age);
+    }
+}
+//Output
+Enter a word: Asina
+Enter your age: 20
+true
+hi Asina my age 20
+
+
+//Program
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) 
+    {
+        char[] data = {'0','1','2','3','4','5','6','7','8','9'};
+        System.out.println(data);
+        String mystring="Hello World";
+        mystring.getChars(7,11,data,4);
+        System.out.println(data);
+    }
+}
+//Output
+0123456789
+0123orld89
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        char[] data={'9','4','0','5'};
+        System.out.print(data);
+        String mystring="Asina";
+        mystring.getChars(5,5,data,0);
+        System.out.print(mystring);
+ }
+}
+//Output
+9405Asina
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="Asina";
+        byte[] arr=name.getBytes();
+        System.out.print(arr[0]);
+ }
+}
+//Output
+65
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="asina";
+        byte[] arr=name.getBytes();
+        System.out.print(name.hashCode());
+ }
+}
+//Output
+93111914
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="asina";
+        System.out.print(name.toUpperCase());
+ }
+}
+//Output
+ASINA
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="asina";
+        System.out.print(name.toLowerCase());
+ }
+}
+//Output
+asina
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="varshni asina";
+        System.out.print(name.indexOf("asina"));
+    }
+}
+//Output
+8
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name="Hello World";
+        String names="";
+        System.out.println(name.isEmpty());
+        System.out.println(names.isEmpty());
+    }
+}
+//Output
+false
+true
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name=String.join(" "," Asina","Begum");
+        System.out.println(name);
+    }
+}
+//Output
+Asina Begum
+
+
+//Program
+public class Main {
+    public static void main(String[] args) {
+        String name=String.join("Hello World");
+        System.out.println(name.lastIndexOf("World"));
+    }
+}
+//Output
+-1
